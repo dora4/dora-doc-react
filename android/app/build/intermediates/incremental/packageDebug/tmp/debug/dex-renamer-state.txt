@@ -1,8 +1,8 @@
-#Sat Nov 18 18:58:12 CST 2023
-base.0=/Users/dora/Desktop/DoraDocReact/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/Users/dora/Desktop/DoraDocReact/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.2=/Users/dora/Desktop/DoraDocReact/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
-base.3=/Users/dora/Desktop/DoraDocReact/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex
+#Sun Dec 24 23:47:17 CST 2023
+base.0=/Users/dora/Desktop/dora-doc-react/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/Users/dora/Desktop/dora-doc-react/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/Users/dora/Desktop/dora-doc-react/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
+base.3=/Users/dora/Desktop/dora-doc-react/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=14/classes.dex
