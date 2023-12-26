@@ -56,7 +56,7 @@ function Section({children, title}: SectionProps): JSX.Element {
   );
 }
 
-function App(): JSX.Element {
+function TutorialDoraViewSkins(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -112,4 +112,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default TutorialDoraViewSkins;
