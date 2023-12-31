@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.doradocreact.app-mergeDebugResources-22:/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "com.doradocreact.app-mergeDebugResources-35:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/Users/dora/.gradle/caches/transforms-3/b14585e0ae3314e7a64bac79062dab1c/transformed/appcompat-1.4.1/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "/Users/dora/.gradle/caches/transforms-3/8a4582fcf4777cd70591117a23078262/transformed/appcompat-1.5.0/res/values-watch-v20/values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",
