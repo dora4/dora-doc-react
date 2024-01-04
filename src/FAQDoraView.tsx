@@ -77,16 +77,8 @@ function FAQDoraView(): JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="dcache框架有对除安卓外其他平台支持的计划吗？">
-            有的，未来规划使用C++实现一个支持如PC端的。
-          </Section>
-
-          <Section title="dcache框架的分页缓存算法是否有漏洞？">
-            有的，正在向大众收集算法代码。
-          </Section>
-
-          <Section title="dcache未来会优化存储内存缓存的数据载体吗？">
-            有这个计划，会新增或替换LiveData为StateFlow。
+          <Section title="dview板块都有哪些功能？">
+              大量的自定义控件，常用颜色，以及一键换肤等有助于UI开发的框架。
           </Section>
         </View>
       </ScrollView>

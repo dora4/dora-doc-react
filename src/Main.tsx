@@ -6,13 +6,7 @@ import FAQ from "./FAQ";
 import FAQDora from "./FAQDora";
 import FAQDoraCache from "./FAQDoraCache";
 import FAQDoraView from "./FAQDoraView";
-import type {PropsWithChildren} from 'react';
 import { useNavigation } from '@react-navigation/native';
-
-type SectionProps = PropsWithChildren<{
-    title: string;
-}>;
-
 
 function MenuScreen() {
     const navigation = useNavigation();
