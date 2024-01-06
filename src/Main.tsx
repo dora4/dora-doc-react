@@ -52,7 +52,7 @@ function MenuScreen() {
 }
 
 const RootStack = createNativeStackNavigator({
-    initialRouteName: 'Home',
+    initialRouteName: 'HomePage',
     screens: {
         Home: FAQ,
         Menu: MenuScreen,
