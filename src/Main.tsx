@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {View, Button} from 'react-native';
+import {View, Text, Button, TouchableOpacity, ScrollView, StyleSheet, ImageBackground} from 'react-native';
 import { createStaticNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import FAQ from "./FAQ";
@@ -11,25 +11,42 @@ import { useNavigation } from '@react-navigation/native';
 function MenuScreen() {
     const navigation = useNavigation();
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Button
-            onPress={() => {
-                navigation.navigate("Dora")
-            }}
-            title="FAQ(Dora)"
-        />
-        <Button
-            onPress={() => {
-                navigation.navigate("DoraCache")
-            }}
-            title="FAQ(Dora Cache)"
-        />
-        <Button
-            onPress={() => {
-                navigation.navigate("DoraView")
-            }}
-            title="FAQ(Dora View)"
-        />
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#f0f8ff' }}>
+        {/*<ScrollView>*/}
+            <TouchableOpacity
+                style={styles.touchRegion}
+                onPress={()=>{
+                    navigation.navigate("Dora")
+                }}>
+                <ImageBackground
+                    source={{uri: "https://reactnative.dev/docs/assets/p_cat1.png"}}
+                    style={{width: 150, height: 150}}>
+                    <Text style={styles.button}>FAQ(Dora)</Text>
+                </ImageBackground>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.touchRegion2}
+                onPress={()=>{
+                    navigation.navigate("DoraCache")
+                }}>
+                <ImageBackground
+                    source={{uri: "https://reactnative.dev/docs/assets/p_cat2.png"}}
+                    style={{width: 150, height: 150}}>
+                    <Text style={styles.button}>FAQ(Dora Cache)</Text>
+                </ImageBackground>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.touchRegion3}
+                onPress={()=>{
+                    navigation.navigate("DoraView")
+                }}>
+                <ImageBackground
+                    source={{uri: "https://reactnative.dev/docs/assets/p_cat1.png"}}
+                    style={{width: 150, height: 150}}>
+                    <Text style={styles.button}>FAQ(Dora View)</Text>
+                </ImageBackground>
+            </TouchableOpacity>
+        {/*</ScrollView>*/}
     </View>
   );
 }
@@ -37,7 +54,7 @@ function MenuScreen() {
 const RootStack = createNativeStackNavigator({
     initialRouteName: 'Home',
     screens: {
-      Home: FAQ,
+        Home: FAQ,
         Menu: MenuScreen,
         Dora: FAQDora,
         DoraCache: FAQDoraCache,
@@ -50,3 +67,47 @@ const Navigation = createStaticNavigation(RootStack);
 export default function Main() {
   return <Navigation />;
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: "center",
+        paddingHorizontal: 10
+    },
+    touchRegion: {
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#eee8aa",
+        padding: 10,
+        marginTop: 20,
+        borderRadius: 4
+    },
+    touchRegion2: {
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#7fffd4",
+        padding: 10,
+        marginTop: 20,
+        borderRadius: 4
+    },
+    touchRegion3: {
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#ff7f50",
+        padding: 10,
+        marginTop: 20,
+        borderRadius: 4
+    },
+    button: {
+        width: 150,
+        height: 150,
+        alignItems: "center",
+        color: "#FFFFFF",
+        padding: 5,
+        borderRadius: 4
+    },
+    countContainer: {
+        alignItems: "center",
+        padding: 10
+    }
+});
