@@ -6,13 +6,15 @@ import FAQ from "./FAQ";
 import FAQDora from "./FAQDora";
 import FAQDoraCache from "./FAQDoraCache";
 import FAQDoraView from "./FAQDoraView";
+import { WalletPicker } from "./WalletPicker";
 import { useNavigation } from '@react-navigation/native';
 
 function MenuScreen() {
     const navigation = useNavigation();
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#f0f8ff' }}>
-        {/*<ScrollView>*/}
+        <ScrollView showsVerticalScrollIndicator={ false }>
+
             <TouchableOpacity
                 style={styles.touchRegion}
                 onPress={()=>{
@@ -46,7 +48,18 @@ function MenuScreen() {
                     <Text style={styles.button}>FAQ(Dora View)</Text>
                 </ImageBackground>
             </TouchableOpacity>
-        {/*</ScrollView>*/}
+            <TouchableOpacity
+                style={styles.touchRegion4}
+                onPress={()=>{
+                    navigation.navigate("WalletPicker")
+                }}>
+                <ImageBackground
+                    source={{uri: "https://reactnative.dev/docs/assets/p_cat2.png"}}
+                    style={{width: 150, height: 150}}>
+                    <Text style={styles.button}>Donate</Text>
+                </ImageBackground>
+            </TouchableOpacity>
+        </ScrollView>
     </View>
   );
 }
@@ -58,7 +71,8 @@ const RootStack = createNativeStackNavigator({
         Menu: MenuScreen,
         Dora: FAQDora,
         DoraCache: FAQDoraCache,
-        DoraView: FAQDoraView
+        DoraView: FAQDoraView,
+        WalletPicker: WalletPicker
     }
 });
 
@@ -94,6 +108,14 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#ff7f50",
+        padding: 10,
+        marginTop: 20,
+        borderRadius: 4
+    },
+    touchRegion4: {
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#389cff",
         padding: 10,
         marginTop: 20,
         borderRadius: 4
