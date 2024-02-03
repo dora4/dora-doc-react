@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {View, Text, Button, TouchableOpacity, ScrollView, StyleSheet, ImageBackground} from 'react-native';
+import {View, Text, TouchableOpacity, ScrollView, StyleSheet, ImageBackground} from 'react-native';
 import { createStaticNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import FAQ from "./FAQ";
@@ -65,7 +65,7 @@ function MenuScreen() {
 }
 
 const RootStack = createNativeStackNavigator({
-    initialRouteName: 'HomePage',
+    initialRouteName: 'MainScreen',
     screens: {
         Home: FAQ,
         Menu: MenuScreen,
@@ -78,7 +78,7 @@ const RootStack = createNativeStackNavigator({
 
 const Navigation = createStaticNavigation(RootStack);
 
-export default function Main() {
+export default function GetStarted() {
   return <Navigation />;
 }
 

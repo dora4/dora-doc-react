@@ -2258,22 +2258,42 @@
     "invariant" "^2.2.4"
     "nullthrows" "^1.1.1"
 
-"@react-navigation/core@^7.0.0-alpha.6":
-  "integrity" "sha512-fOLt1uTpkClB5LpYjpKo8dNFT3clyWOI4C8IhOmReRAGFwPHkoW5HjE+9MrHKP43zzsc5Sm9p3F/FmPCwQJ9yw=="
-  "resolved" "https://registry.npmjs.org/@react-navigation/core/-/core-7.0.0-alpha.6.tgz"
-  "version" "7.0.0-alpha.6"
+"@react-navigation/bottom-tabs@^7.0.0-alpha.8":
+  "integrity" "sha512-bZu4bwea1tQwz1M3DTAorUf9ql75M8SjWTbvN0wzRFvZ19mpfQMhrQWnmOGyepBC8pDRcGB7aX3IHzmQ/nTu3w=="
+  "resolved" "https://registry.npmjs.org/@react-navigation/bottom-tabs/-/bottom-tabs-7.0.0-alpha.8.tgz"
+  "version" "7.0.0-alpha.8"
   dependencies:
-    "@react-navigation/routers" "^7.0.0-alpha.4"
+    "@react-navigation/elements" "^2.0.0-alpha.5"
+    "color" "^4.2.3"
+
+"@react-navigation/core@^7.0.0-alpha.7":
+  "integrity" "sha512-fTKmi2yZys5fqJJQGte08hG9Agmtf2ksjPtSRll0doQQPLAR740Xyf5YSZoEBTCHVpAzfX8gkyBL6zSNj8W9bQ=="
+  "resolved" "https://registry.npmjs.org/@react-navigation/core/-/core-7.0.0-alpha.7.tgz"
+  "version" "7.0.0-alpha.7"
+  dependencies:
+    "@react-navigation/routers" "^7.0.0-alpha.5"
     "escape-string-regexp" "^4.0.0"
     "nanoid" "3.3.6"
     "query-string" "^7.1.3"
     "react-is" "^18.2.0"
     "use-latest-callback" "^0.1.9"
 
+"@react-navigation/elements@^1.3.21":
+  "integrity" "sha512-eyS2C6McNR8ihUoYfc166O1D8VYVh9KIl0UQPI8/ZJVsStlfSTgeEEh+WXge6+7SFPnZ4ewzEJdSAHH+jzcEfg=="
+  "resolved" "https://registry.npmjs.org/@react-navigation/elements/-/elements-1.3.21.tgz"
+  "version" "1.3.21"
+
 "@react-navigation/elements@^2.0.0-alpha.4":
-  "integrity" "sha512-pVIrNivKHOsqusRQ9G0l9mpaSmm7FLJ55C+n6AVZQzbqMlJRIPAs7HCH3mJxYh6xU3dzOa0TR/++XEMd13UXQQ=="
-  "resolved" "https://registry.npmjs.org/@react-navigation/elements/-/elements-2.0.0-alpha.4.tgz"
-  "version" "2.0.0-alpha.4"
+  "integrity" "sha512-LfIzefiwTCmUNYjMTs/2G7bUHPc/VrQ9OfkvMSk/cyqgjjDdJoRq9g6aLP1FsF1tlFKoUpTnWaTsFP6l4DJb8Q=="
+  "resolved" "https://registry.npmjs.org/@react-navigation/elements/-/elements-2.0.0-alpha.5.tgz"
+  "version" "2.0.0-alpha.5"
+  dependencies:
+    "color" "^4.2.3"
+
+"@react-navigation/elements@^2.0.0-alpha.5":
+  "integrity" "sha512-LfIzefiwTCmUNYjMTs/2G7bUHPc/VrQ9OfkvMSk/cyqgjjDdJoRq9g6aLP1FsF1tlFKoUpTnWaTsFP6l4DJb8Q=="
+  "resolved" "https://registry.npmjs.org/@react-navigation/elements/-/elements-2.0.0-alpha.5.tgz"
+  "version" "2.0.0-alpha.5"
   dependencies:
     "color" "^4.2.3"
 
@@ -2285,21 +2305,21 @@
     "@react-navigation/elements" "^2.0.0-alpha.4"
     "warn-once" "^0.1.1"
 
-"@react-navigation/native@^7.0.0-alpha.6":
-  "integrity" "sha512-H9/IFAEeHcQoYZ446x6/E+q39b+WwKk3Q0BzVPnCOV176A9XS+fLk6regXp/S8XUTdyM8GHyTIYRM1sFrVYwug=="
-  "resolved" "https://registry.npmjs.org/@react-navigation/native/-/native-7.0.0-alpha.6.tgz"
-  "version" "7.0.0-alpha.6"
+"@react-navigation/native@^6.0.0", "@react-navigation/native@^7.0.0-alpha.6", "@react-navigation/native@^7.0.0-alpha.7":
+  "integrity" "sha512-LMSCkDnZ8DWDhp5Llp3U2CCVyAfIK4jIRDgg4Q6QWQkB+rrFnxzgFSdzhBJLCvpAnXgbTz7jOuToqO9wN8vghQ=="
+  "resolved" "https://registry.npmjs.org/@react-navigation/native/-/native-7.0.0-alpha.7.tgz"
+  "version" "7.0.0-alpha.7"
   dependencies:
-    "@react-navigation/core" "^7.0.0-alpha.6"
+    "@react-navigation/core" "^7.0.0-alpha.7"
     "escape-string-regexp" "^4.0.0"
     "fast-deep-equal" "^3.1.3"
     "nanoid" "3.3.6"
     "use-latest-callback" "^0.1.9"
 
-"@react-navigation/routers@^7.0.0-alpha.4":
-  "integrity" "sha512-hYOWeVa6xZ+6evUh0F5sr/bg9Vm4KLFcL7Ws3JK4oe8JGV5xQ95afg7rrzlQ9cDvY70F0n11ekXGxV0ehkuOPQ=="
-  "resolved" "https://registry.npmjs.org/@react-navigation/routers/-/routers-7.0.0-alpha.4.tgz"
-  "version" "7.0.0-alpha.4"
+"@react-navigation/routers@^7.0.0-alpha.5":
+  "integrity" "sha512-r4wSCQZIpwpkQEV3ZuI0FeDOmeCq65fyAfL+z4dJlklVNsANF6JP4xAjuWyqOBikx3t7MlShp7K3w3DEVp8nBg=="
+  "resolved" "https://registry.npmjs.org/@react-navigation/routers/-/routers-7.0.0-alpha.5.tgz"
+  "version" "7.0.0-alpha.5"
   dependencies:
     "nanoid" "3.3.6"
 
@@ -8912,7 +8932,7 @@
   "resolved" "https://registry.npmmirror.com/react-is/-/react-is-17.0.2.tgz"
   "version" "17.0.2"
 
-"react-native-safe-area-context@^4.8.2", "react-native-safe-area-context@4.6.3":
+"react-native-safe-area-context@^4.8.2", "react-native-safe-area-context@>= 3.0.0", "react-native-safe-area-context@4.6.3":
   "integrity" "sha512-ffUOv8BJQ6RqO3nLml5gxJ6ab3EestPiyWekxdzO/1MQ7NF8fW1Mzh1C5QE9yq573Xefnc7FuzGXjtesZGv7cQ=="
   "resolved" "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-4.8.2.tgz"
   "version" "4.8.2"
