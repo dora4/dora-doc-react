@@ -1,5 +1,3 @@
-This is a new [**Dora Doc**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
-
 <img width="332" alt="截屏2023-12-05 23 17 55" src="https://github.com/dora4/dora-doc-react/assets/71242257/25f73fdf-fdf4-4940-9690-cf6019e0a345">
 
 # Getting Started
