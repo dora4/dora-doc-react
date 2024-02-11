@@ -2,11 +2,11 @@ import * as React from 'react';
 import {View, Text, TouchableOpacity, ScrollView, StyleSheet, ImageBackground} from 'react-native';
 import { createStaticNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import FAQ from "./FAQ";
-import FAQDora from "./FAQDora";
-import FAQDoraCache from "./FAQDoraCache";
-import FAQDoraView from "./FAQDoraView";
-import { WalletPicker } from "./WalletPicker";
+import FAQ from "./faq/FAQ";
+import FAQDora from "./faq/FAQDora";
+import FAQDoraCache from "./faq/FAQDoraCache";
+import FAQDoraView from "./faq/FAQDoraView";
+import { WalletPicker } from "./example/WalletPicker";
 import { useNavigation } from '@react-navigation/native';
 
 function MenuScreen() {
