@@ -9,7 +9,7 @@ var regex = /xyz/i;
 var regex = new RegExp(/xyz/, 'i');
 // Uncaught TypeError: Cannot supply flags when constructing one RegExp from another
 
-function  codePointLength(text) {
+function codePointLength(text) {
     let result = text.match(/[\s\S]/gu);
     return result ? result.length : 0;
 }
