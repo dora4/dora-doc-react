@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {View, Text, TouchableOpacity, ScrollView, StyleSheet, ImageBackground} from 'react-native';
+import {View, Text, TouchableOpacity, ScrollView, StyleSheet, ImageBackground, Alert} from 'react-native';
 import { createStaticNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import FAQ from "./faq/FAQ";
@@ -14,51 +14,53 @@ function MenuScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#f0f8ff' }}>
         <ScrollView showsVerticalScrollIndicator={ false }>
-
-            <TouchableOpacity
-                style={styles.touchRegion}
-                onPress={()=>{
-                    navigation.navigate("Dora")
-                }}>
-                <ImageBackground
-                    source={{uri: "https://reactnative.dev/docs/assets/p_cat1.png"}}
-                    style={{width: 150, height: 150}}>
-                    <Text style={styles.button}>FAQ(Dora)</Text>
-                </ImageBackground>
-            </TouchableOpacity>
-            <TouchableOpacity
-                style={styles.touchRegion2}
-                onPress={()=>{
-                    navigation.navigate("DoraCache")
-                }}>
-                <ImageBackground
-                    source={{uri: "https://reactnative.dev/docs/assets/p_cat2.png"}}
-                    style={{width: 150, height: 150}}>
-                    <Text style={styles.button}>FAQ(Dora Cache)</Text>
-                </ImageBackground>
-            </TouchableOpacity>
-            <TouchableOpacity
-                style={styles.touchRegion3}
-                onPress={()=>{
-                    navigation.navigate("DoraView")
-                }}>
-                <ImageBackground
-                    source={{uri: "https://reactnative.dev/docs/assets/p_cat1.png"}}
-                    style={{width: 150, height: 150}}>
-                    <Text style={styles.button}>FAQ(Dora View)</Text>
-                </ImageBackground>
-            </TouchableOpacity>
-            <TouchableOpacity
-                style={styles.touchRegion4}
-                onPress={()=>{
-                    navigation.navigate("WalletPicker")
-                }}>
-                <ImageBackground
-                    source={{uri: "https://reactnative.dev/docs/assets/p_cat2.png"}}
-                    style={{width: 150, height: 150}}>
-                    <Text style={styles.button}>Donate</Text>
-                </ImageBackground>
-            </TouchableOpacity>
+            <View style={styles.container}>
+                <TouchableOpacity
+                    style={[styles.touchRegion, {backgroundColor:'#eee8aa'}]}
+                    onPress={()=>{
+                        navigation.navigate("Dora")
+                    }}>
+                    <ImageBackground
+                        source={{uri: "https://reactnative.dev/docs/assets/p_cat1.png"}}
+                        style={{width: 150, height: 150}}>
+                        <Text style={styles.button}>FAQ(Dora)</Text>
+                    </ImageBackground>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={[styles.touchRegion, {backgroundColor:'#ff7f50'}]}
+                    onPress={()=>{
+                        navigation.navigate("DoraCache")
+                    }}>
+                    <ImageBackground
+                        source={{uri: "https://reactnative.dev/docs/assets/p_cat2.png"}}
+                        style={{width: 150, height: 150}}>
+                        <Text style={styles.button}>FAQ(Dora Cache)</Text>
+                    </ImageBackground>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={[styles.touchRegion, {backgroundColor:'#7fffd4'}]}
+                    onPress={()=>{
+                        navigation.navigate("DoraView")
+                    }}>
+                    <ImageBackground
+                        source={{uri: "https://reactnative.dev/docs/assets/p_cat2.png"}}
+                        style={{width: 150, height: 150}}>
+                        <Text style={styles.button}>FAQ(Dora View)</Text>
+                    </ImageBackground>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={[styles.touchRegion, {backgroundColor:'#389cff'}]}
+                    onPress={()=>{
+                        Alert.alert("捐款功能施工中");
+                        // navigation.navigate("WalletPicker")
+                    }}>
+                    <ImageBackground
+                        source={{uri: "https://reactnative.dev/docs/assets/p_cat1.png"}}
+                        style={{width: 150, height: 150}}>
+                        <Text style={styles.button}>Donate</Text>
+                    </ImageBackground>
+                </TouchableOpacity>
+            </View>
         </ScrollView>
     </View>
   );
@@ -85,40 +87,15 @@ export default function GetStarted() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: "center",
-        paddingHorizontal: 10
+        flexDirection: "row",
+        justifyContent: "space-evenly",
+        flexWrap: 'wrap'
     },
     touchRegion: {
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#eee8aa",
         padding: 10,
         marginTop: 20,
-        borderRadius: 4
-    },
-    touchRegion2: {
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#7fffd4",
-        padding: 10,
-        marginTop: 20,
-        borderRadius: 4
-    },
-    touchRegion3: {
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#ff7f50",
-        padding: 10,
-        marginTop: 20,
-        borderRadius: 4
-    },
-    touchRegion4: {
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#389cff",
-        padding: 10,
-        marginTop: 20,
-        marginBottom: 20,
         borderRadius: 4
     },
     button: {
