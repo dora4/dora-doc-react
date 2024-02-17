@@ -1,5 +1,15 @@
 import * as React from 'react';
-import {View, Text, TouchableOpacity, ScrollView, StyleSheet, ImageBackground, Alert} from 'react-native';
+import {
+    View,
+    Text,
+    TouchableOpacity,
+    ScrollView,
+    StyleSheet,
+    ImageBackground,
+    Alert,
+    SafeAreaView,
+    StatusBar, useColorScheme
+} from 'react-native';
 import { createStaticNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import FAQ from "./faq/FAQ";
@@ -8,11 +18,22 @@ import FAQDoraCache from "./faq/FAQDoraCache";
 import FAQDoraView from "./faq/FAQDoraView";
 import { WalletPicker } from "./example/WalletPicker";
 import { useNavigation } from '@react-navigation/native';
+import {Colors} from "react-native/Libraries/NewAppScreen";
 
 function MenuScreen() {
     const navigation = useNavigation();
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#f0f8ff' }}>
+    const isDarkMode = useColorScheme() === 'dark';
+
+    const backgroundStyle = {
+        backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    };
+
+    return (
+    <SafeAreaView style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#f0f8ff' }}>
+        <StatusBar
+            barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+            backgroundColor={backgroundStyle.backgroundColor}
+        />
         <ScrollView showsVerticalScrollIndicator={ false }>
             <View style={styles.container}>
                 <TouchableOpacity
@@ -62,7 +83,7 @@ function MenuScreen() {
                 </TouchableOpacity>
             </View>
         </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
 
